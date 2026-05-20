@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Ruin and the Road — Booklet (Pre-Imposed)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+      background: #555;
+      padding: 20px;
+    }
+
+    .print-note {
+      width: 11in;
+      margin: 0 auto 14px;
+      background: #fffbe6;
+      border: 1px solid #c8a800;
+      border-radius: 3px;
+      padding: 10px 16px;
+      font-family: system-ui, sans-serif;
+      font-size: 12px;
+      color: #5a4000;
+      line-height: 1.6;
+    }
+
+    .sheet-label {
+      width: 11in;
+      margin: 0 auto 3px;
+      font-family: system-ui, sans-serif;
+      font-size: 11px;
+      color: #bbb;
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+
+    .sheet {
+      width: 11in;
+      height: 8.5in;
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto 10px;
+      position: relative;
+    }
+
+    @media screen {
+      .sheet::after {
+        content: '';
+        position: absolute;
+        left: calc(5.5in - 0.5px);
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: rgba(200, 180, 130, 0.5);
+        pointer-events: none;
+        z-index: 10;
+      }
+    }
+
+    .panel {
+      width: 5.5in;
+      height: 8.5in;
+      background: #faf8f4;
+      padding: 0.42in 0.44in;
+      position: relative;
+      font-size: 9.5pt;
+      line-height: 1.58;
+      color: #1a1a1a;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* ── COVER ── */
+    .cover {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+    }
+    .cover-top { flex: 0 0 auto; margin-bottom: 0.18in; }
+    .cover-title { font-size: 23pt; font-weight: 600; letter-spacing: 0.02em; color: #2a1f0e; line-height: 1.2; margin-bottom: 0.06in; }
+    .cover-subtitle { font-size: 10.5pt; font-style: italic; color: #5a4a35; margin-bottom: 0.04in; }
+    .cover-inspired { font-size: 9pt; color: #7a6a55; font-style: italic; }
+    .cover-rule { width: 1.8in; height: 1px; background: #8b7355; margin: 0.14in auto; }
+    .illustration-box { flex: 1 1 auto; width: 100%; border: 1.5px solid #c8b89a; background: #ede8de; display: flex; align-items: center; justify-content: center; margin-bottom: 0.18in; min-height: 2.8in; }
+    .illustration-box span { font-style: italic; color: #b0a090; font-size: 9pt; letter-spacing: 0.04em; }
+    .cover-bottom { flex: 0 0 auto; }
+    .cover-author { font-size: 11pt; color: #2a1f0e; margin-bottom: 0.04in; }
+    .cover-tagline { font-size: 9pt; font-style: italic; color: #7a6a55; }
+
+    /* ── GENERAL TYPOGRAPHY ── */
+    h2 { font-size: 11pt; font-weight: 600; margin-bottom: 0.08in; padding-bottom: 3px; border-bottom: 1px solid #c8b89a; color: #2a1f0e; }
+    h3 { font-size: 9.5pt; font-weight: 600; margin: 0.09in 0 0.04in; color: #3a2a10; }
+    p { margin-bottom: 0.055in; }
+    hr { border: none; border-top: 1px solid #c8b89a; margin: 0.08in 0; }
+
+    .page-num { position: absolute; bottom: 0.22in; right: 0.44in; font-size: 8pt; color: #9a8a75; font-style: italic; }
+
+    /* ── INTRO THEMES ── */
+    .theme-block { margin: 0.09in 0; padding: 0.09in 0.11in; background: #f3ede3; border-left: 2.5px solid #8b7355; font-size: 10pt; }
+    .theme-title { font-weight: 600; margin-bottom: 1px; }
+    .theme-hebrew { font-size: 12.5pt; direction: rtl; }
+    .theme-translit { font-style: italic; color: #5a4a35; font-size: 9.5pt; margin-bottom: 3px; }
+    .theme-quote { padding-left: 9px; border-left: 2px solid #b0976a; font-style: italic; font-size: 9.5pt; margin: 3px 0 2px; }
+    .sit-with { font-style: italic; color: #7a6a55; font-size: 9pt; margin-top: 3px; }
+
+    /* ── SOURCE TEXT ── */
+    .hebrew-text { direction: rtl; font-size: 10pt; line-height: 1.75; padding: 0.07in 0.11in; background: #f3ede3; border: 1px solid #c8b89a; margin: 0.05in 0 0.08in; text-align: right; }
+    .english-text { padding: 0.07in 0.1in; background: #f8f5ef; border-left: 2.5px solid #8b7355; font-style: italic; font-size: 9.5pt; line-height: 1.58; margin: 0.05in 0; }
+    .citation { text-align: right; font-style: italic; color: #7a6a55; font-size: 8.5pt; margin-top: 3px; margin-bottom: 0.05in; }
+
+    /* ── NOTES ON SOURCE ── */
+    .source-note { margin: 0.06in 0; font-size: 9.5pt; }
+    .note-heading { font-weight: 600; font-style: italic; display: block; margin-bottom: 2px; }
+
+    /* ── RITUAL ── */
+    .ritual-text { font-style: italic; padding: 0.09in 0.11in; background: #f3ede3; border-left: 2.5px solid #8b7355; margin: 0.07in 0; font-size: 10pt; line-height: 1.65; }
+    ul.atmosphere { list-style: none; margin: 0.05in 0; padding: 0; font-size: 10pt; }
+    ul.atmosphere li { padding: 2px 0 2px 15px; position: relative; }
+    ul.atmosphere li::before { content: "\2014"; position: absolute; left: 0; color: #8b7355; }
+
+    /* ── SCRIPT ── */
+    .script-intro { font-style: italic; color: #5a4a35; font-size: 8.5pt; border-bottom: 1px solid #c8b89a; padding-bottom: 0.05in; margin-bottom: 0.07in; line-height: 1.45; }
+    .script-block { margin: 0.09in 0; }
+    .speaker { font-weight: 600; font-size: 8.5pt; letter-spacing: 0.08em; text-transform: uppercase; color: #3a2a10; display: block; margin-bottom: 1px; }
+    .cue { font-size: 7.5pt; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8b7355; margin-right: 4px; }
+    .stage-dir { font-style: italic; color: #5a4a35; }
+    .script-hebrew { direction: rtl; font-size: 12pt; line-height: 1.85; text-align: center; display: block; margin: 0.1in 0 0.03in; }
+    .script-translation { font-style: italic; text-align: center; font-size: 10pt; margin-bottom: 0.05in; }
+
+    /* ── COMMENTARY ── */
+    .commentary-entry { margin: 0.08in 0; font-size: 10pt; }
+    .entry-heading { font-weight: 600; display: block; margin-bottom: 2px; }
+
+    /* ── MUSIC ── */
+    .music-theme { margin: 0.03in 0; padding: 0.04in 0.09in; background: #f3ede3; border-left: 2.5px solid #a08060; font-size: 9.5pt; line-height: 1.5; }
+    .music-theme strong { display: block; margin-bottom: 1px; }
+    .music-detail { color: #5a4a35; }
+    table { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin: 0.05in 0; }
+    th { background: #e8dfd0; padding: 3px 8px; text-align: left; font-weight: 600; border-bottom: 1.5px solid #c8b89a; }
+    td { padding: 3px 8px; border-bottom: 1px solid #ddd5c4; }
+    tr:last-child td { border-bottom: none; }
+
+    /* ── MARA HEBREW ── */
+    .mara-hebrew { direction: rtl; font-size: 13pt; text-align: center; display: block; margin: 0.1in 0 0.04in; line-height: 1.8; }
+    .mara-citation { text-align: center; font-style: italic; color: #5a4a35; font-size: 9.5pt; margin-bottom: 0.09in; }
+
+    /* ── DISCUSSION ── */
+    .discussion-item { margin-bottom: 0.18in; }
+    .discussion-q { font-size: 11.5pt; line-height: 1.5; margin-bottom: 0.1in; color: #2a1f0e; }
+    .write-line { border-bottom: 1px solid #b0a090; height: 0.34in; margin-bottom: 0; }
+    .draw-box { border: 1px solid #b0a090; height: 2.6in; margin-top: 0.08in; background: #faf8f4; }
+
+    /* ── PRINT ── */
+    @media print {
+      body { background: white; padding: 0; }
+      .print-note, .sheet-label { display: none; }
+      .sheet { margin: 0; page-break-after: always; overflow: hidden; }
+      .sheet:last-child { page-break-after: auto; }
+      .panel { overflow: visible; }
+      @page { size: 11in 8.5in; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<p class="print-note">
+  <strong>Printing instructions:</strong> Open in browser &rarr; File &rarr; Print &rarr;
+  Paper size: <strong>Letter (8.5&times;11)</strong> &bull;
+  Orientation: <strong>Landscape</strong> &bull;
+  Two-sided: <strong>On</strong> &bull;
+  Binding: <strong>Short-Edge</strong> (flip on short side).<br>
+  Stack all 4 sheets, fold in half, staple along the center fold.
+  <em>If the back side comes out rotated 180&deg;, try &ldquo;Long-Edge&rdquo; binding instead.</em>
+</p>
+
+<!-- ══════════════════════════════════════════
+     SHEET 1 FRONT — p.16 (L) | p.1 (R)
+══════════════════════════════════════════ -->
+<div class="sheet-label">Sheet 1 — Front &nbsp;|&nbsp; Left: p.16 (back cover) &nbsp;&bull;&nbsp; Right: p.1 (front cover)</div>
+<div class="sheet">
+
+  <!-- p.16 — BLANK BACK COVER -->
+  <div class="panel"></div>
+
+  <!-- p.1 — FRONT COVER -->
+  <div class="panel cover">
+    <div class="cover-top">
+      <div class="cover-title">The Ruin and the Road</div>
+      <div class="cover-subtitle">A Tisha b&rsquo;Av Readers Theater and Study Booklet</div>
+      <div class="cover-inspired">Inspired by Berakhot 3a and Eikhah (Lamentations)</div>
+      <div class="cover-rule"></div>
+    </div>
+    <div class="illustration-box"><span>illustration</span></div>
+    <div class="cover-bottom">
+      <div class="cover-rule"></div>
+      <div class="cover-author">Written by Cary Mannaberg</div>
+      <div class="cover-tagline">For Tisha b&rsquo;Av study and worship</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     SHEET 1 BACK — p.2 (L) | p.15 (R)
+══════════════════════════════════════════ -->
+<div class="sheet-label">Sheet 1 — Back &nbsp;|&nbsp; Left: p.2 (blank inside cover) &nbsp;&bull;&nbsp; Right: p.15 (discussion 4&ndash;5 + draw)</div>
+<div class="sheet">
+
+  <!-- p.2 — BLANK INSIDE COVER -->
+  <div class="panel"></div>
+
+  <!-- p.15 — DISCUSSION 4–5 + DRAW -->
+  <div class="panel">
+    <div class="discussion-item">
+      <p class="discussion-q"><strong>4. The Road</strong> &mdash; What is one small step forward you feel willing to take?</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+    <div class="discussion-item">
+      <p class="discussion-q"><strong>5. Hashiveinu</strong> &mdash; How might &ldquo;renew our days as of old&rdquo; mean courage, not nostalgia?</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+    <div class="discussion-item">
+      <p class="discussion-q"><strong>6. Draw</strong> &mdash; Sketch something from the play: the dove, the ruin, the woman returning, Elijah at the threshold&hellip;</p>
+      <div class="draw-box"></div>
+    </div>
+    <div class="page-num">15</div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     SHEET 2 FRONT — p.14 (L) | p.3 (R)
+══════════════════════════════════════════ -->
+<div class="sheet-label">Sheet 2 — Front &nbsp;|&nbsp; Left: p.14 (discussion 1&ndash;3) &nbsp;&bull;&nbsp; Right: p.3 (title page)</div>
+<div class="sheet">
+
+  <!-- p.14 — DISCUSSION 1–3 -->
+  <div class="panel">
+    <h2 style="font-size:13pt; margin-bottom:0.16in;">8. Discussion Prompts</h2>
+    <div class="discussion-item">
+      <p class="discussion-q"><strong>1. The Ruin</strong> &mdash; What &ldquo;ruins&rdquo; do you see in our world or in your own story?</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+    <div class="discussion-item">
+      <p class="discussion-q"><strong>2. The Stranger</strong> &mdash; Who has met you at the threshold of pain?</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+    <div class="discussion-item">
+      <p class="discussion-q"><strong>3. The Dove</strong> &mdash; What does it mean that Hashem cries with us?</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+    <div class="page-num">14</div>
+  </div>
+
+  <!-- p.3 — TITLE PAGE -->
+  <div class="panel" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+    <div style="width:1.8in; height:1px; background:#8b7355; margin:0 auto 0.3in;"></div>
+    <div style="font-size:20pt; font-weight:600; color:#2a1f0e; letter-spacing:0.02em; line-height:1.25; margin-bottom:0.12in;">The Ruin and the Road</div>
+    <div style="font-size:10.5pt; font-style:italic; color:#5a4a35; margin-bottom:0.08in;">A Tisha b&rsquo;Av Readers Theater and Study Booklet</div>
+    <div style="font-size:9pt; font-style:italic; color:#7a6a55; margin-bottom:0.3in;">Inspired by Berakhot 3a and Eikhah (Lamentations)</div>
+    <div style="width:1.8in; height:1px; background:#8b7355; margin:0 auto 0.3in;"></div>
+    <div style="font-size:10.5pt; color:#2a1f0e; margin-bottom:0.08in;">Written by Cary Mannaberg</div>
+    <div style="font-size:9pt; font-style:italic; color:#7a6a55;">For Tisha b&rsquo;Av study and worship</div>
+    <div style="width:1.8in; height:1px; background:#8b7355; margin:0.3in auto 0;"></div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     SHEET 2 BACK — p.4 (L) | p.13 (R)
+══════════════════════════════════════════ -->
+<div class="sheet-label">Sheet 2 — Back &nbsp;|&nbsp; Left: p.4 (introduction) &nbsp;&bull;&nbsp; Right: p.13 (music guide)</div>
+<div class="sheet">
+
+  <!-- p.4 — INTRODUCTION -->
+  <div class="panel">
+    <h2>1. Introduction</h2>
+    <p>On Tisha b&rsquo;Av, we sit in the ruins&mdash;of the Temple, of our people&rsquo;s traumas, and of our own world&rsquo;s unraveling. This booklet offers a readers theater piece, commentary, and musical and ritual guides for synagogue use. It weaves the Talmudic story of Rabbi Yosi and Elijah with Lamentations and our contemporary experience of crumbling institutions, broken trust, and violence in word and deed.</p>
+    <p>Three themes carry this story. They are ancient words. They are also the words we reach for when everything else has been taken away.</p>
+    <div class="theme-block">
+      <div class="theme-title">Devotion &mdash; <span class="theme-hebrew">דְּבֵקוּת</span></div>
+      <div class="theme-translit">D&rsquo;veikut &mdash; cleaving, holding fast</div>
+      <div class="theme-quote">&ldquo;But you who cleave to the Lord your God are alive, every one of you, this day.&rdquo;<br>&mdash; Deuteronomy 4:4</div>
+      <div class="sit-with">Sit with this a moment.</div>
+    </div>
+    <div class="theme-block">
+      <div class="theme-title">Faith &mdash; <span class="theme-hebrew">אֱמוּנָה</span></div>
+      <div class="theme-translit">Emunah &mdash; faithfulness, steadiness</div>
+      <div class="theme-quote">&ldquo;The steadfast love of the Lord never ceases; His mercies never come to an end. They are new every morning.&rdquo;<br>&mdash; Lamentations 3:22&ndash;23</div>
+      <div class="sit-with">Sit with this a moment.</div>
+    </div>
+    <div class="theme-block">
+      <div class="theme-title">Hope &mdash; <span class="theme-hebrew">תִּקְוָה</span></div>
+      <div class="theme-translit">Tikvah &mdash; hope, a thread held taut</div>
+      <div class="theme-quote">&ldquo;This I call to mind, and therefore I have hope.&rdquo;<br>&mdash; Lamentations 3:21</div>
+      <div class="sit-with">Sit with this a moment.</div>
+    </div>
+    <div class="page-num">4</div>
+  </div>
+
+  <!-- p.13 — MUSICAL ARRANGEMENT -->
+  <div class="panel">
+    <h2>7. Musical Arrangement Guide</h2>
+    <h3>Instrumentation</h3>
+    <p>Use any of: lyre, classical guitar, harp, violin, cello, or a small combination. The sound should be ancient, sparse, and fragile. Silence is part of the music.</p>
+    <h3>Four Themes</h3>
+    <div class="music-theme">
+      <strong>Theme A &mdash; &ldquo;The Ruin&rdquo;</strong><br>
+      <span class="music-detail">Mode: Natural minor or Phrygian</span><br>
+      <span class="music-detail">Tempo: Very slow</span><br>
+      <span class="music-detail"><em>Use: Prelude, Mara&rsquo;s opening lines, moments of lament</em></span>
+    </div>
+    <div class="music-theme">
+      <strong>Theme B &mdash; &ldquo;The Stranger&rdquo;</strong><br>
+      <span class="music-detail">Mode: Dorian or harmonic minor</span><br>
+      <span class="music-detail">Tempo: Slow, steady</span><br>
+      <span class="music-detail"><em>Use: When the Stranger speaks</em></span>
+    </div>
+    <div class="music-theme">
+      <strong>Theme C &mdash; &ldquo;The Road&rdquo;</strong><br>
+      <span class="music-detail">Mode: Minor with a gentle lift (raised 6th or 7th)</span><br>
+      <span class="music-detail">Tempo: Slightly more flowing</span><br>
+      <span class="music-detail"><em>Use: Mara&rsquo;s step away from the ruin</em></span>
+    </div>
+    <div class="music-theme">
+      <strong>Theme D &mdash; &ldquo;Hashiveinu&rdquo;</strong><br>
+      <span class="music-detail">Mode: Match the mode of your chosen Hashiveinu melody</span><br>
+      <span class="music-detail"><em>Use: Lamentations 5:21 chant and its instrumental echo</em></span>
+    </div>
+    <h3>Cue Plan</h3>
+    <table>
+      <thead><tr><th>Cue</th><th>Theme</th><th>When</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>Theme A</td><td>Prelude and early narration</td></tr>
+        <tr><td>B</td><td>Dove&rsquo;s cry</td><td>High harmonic or gentle glissando over Theme A</td></tr>
+        <tr><td>C</td><td>Theme B</td><td>Stranger&rsquo;s lines</td></tr>
+        <tr><td>D</td><td>Theme C</td><td>&ldquo;A single honest word&hellip;&rdquo; and Mara&rsquo;s step</td></tr>
+        <tr><td>E</td><td>Theme D</td><td>Lamentations 5:21 chant and instrumental continuation</td></tr>
+        <tr><td>F</td><td>Silence</td><td>Music fades; room holds quiet</td></tr>
+      </tbody>
+    </table>
+    <div class="page-num">13</div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     SHEET 3 FRONT — p.12 (L) | p.5 (R)
+══════════════════════════════════════════ -->
+<div class="sheet-label">Sheet 3 — Front &nbsp;|&nbsp; Left: p.12 (commentary) &nbsp;&bull;&nbsp; Right: p.5 (source text)</div>
+<div class="sheet">
+
+  <!-- p.12 — SYMBOLIC COMMENTARY -->
+  <div class="panel">
+    <h2>6. Symbolic Commentary</h2>
+    <div class="commentary-entry">
+      <span class="entry-heading">The Ruin</span>
+      The boarded-up shrine is the modern ḥurvah&mdash;a sacred space that failed to protect. It mirrors the desolation of Jerusalem in Lamentations: &ldquo;Her gates have sunk into the ground&rdquo; (2:9). It represents betrayed holiness and the collapse of trust in institutions.
+    </div>
+    <div class="commentary-entry">
+      <span class="entry-heading">Mara</span>
+      Mara&rsquo;s name echoes <em>marah</em>, bitterness. She stands in the ashes of her trust, like Zion in Eikhah: &ldquo;She weeps bitterly in the night&hellip; there is none to comfort her&rdquo; (1:2). She is courageous enough to face the ruins, but vulnerable enough to be crushed by them.
+    </div>
+    <div class="commentary-entry">
+      <span class="entry-heading">The Stranger</span>
+      The Stranger is Elijah-like: appearing at the threshold, not inside the ruin. This presence interrupts despair and insists that Mara not remain trapped. It echoes Lamentations 3:21: &ldquo;This I call to mind, therefore I have hope.&rdquo;
+    </div>
+    <div class="commentary-entry">
+      <span class="entry-heading">The Dove</span>
+      The dove recalls the Talmud&rsquo;s image of a <em>bat kol</em> moaning like a dove. It symbolizes Hashem&rsquo;s grief and the world&rsquo;s witness to suffering: &ldquo;My eyes flow with rivers of tears&hellip; until the Lord looks down and sees&rdquo; (3:48&ndash;50).
+    </div>
+    <div class="commentary-entry">
+      <span class="entry-heading">The Road</span>
+      The road is movement, agency, and the possibility of healing. Elijah&rsquo;s teaching&mdash;do not pray in the ruin, pray on the road&mdash;becomes a theology of motion. It resonates with Lamentations 5:21: &ldquo;Turn us toward You&hellip; renew our days.&rdquo;
+    </div>
+    <div class="page-num">12</div>
+  </div>
+
+  <!-- p.5 — SOURCE TEXT -->
+  <div class="panel">
+    <h2>2. The Source: Berakhot 3a</h2>
+    <p>This play is a midrash&mdash;a retelling&mdash;rooted in a brief and extraordinary passage from the Talmud. Here is the original story.</p>
+    <h3>Hebrew</h3>
+    <div class="hebrew-text">
+      תַּנְיָא, אָמַר רַבִּי יוֹסֵי: פַּעַם אַחַת הָיִיתִי מְהַלֵּךְ בַּדֶּרֶךְ וְנִכְנַסְתִּי לְחוּרְבָּה אַחַת מֵחוּרְבוֹת יְרוּשָׁלַיִם לְהִתְפַּלֵּל. בָּא אֵלִיָּהוּ זָכוּר לַטּוֹב וְשָׁמַר לִי עַל הַפֶּתַח, עַד שֶׁסִּיַּמְתִּי תְּפִלָּתִי. לְאַחַר שֶׁסִּיַּמְתִּי תְּפִלָּתִי אָמַר לִי: שָׁלוֹם עָלֶיךָ, רַבִּי. וְאָמַרְתִּי לוֹ: שָׁלוֹם עָלֶיךָ, רַבִּי וּמוֹרִי. וְאָמַר לִי: בְּנִי, מִפְּנֵי מָה נִכְנַסְתָּ לְחוּרְבָּה זוֹ? אָמַרְתִּי לוֹ: לְהִתְפַּלֵּל. וְאָמַר לִי: הָיָה לְךָ לְהִתְפַּלֵּל בַּדֶּרֶךְ. וְאָמַרְתִּי לוֹ: מִתְיָרֵא הָיִיתִי שֶׁמָּא יַפְסִיקוּ בִּי עוֹבְרֵי דְּרָכִים. וְאָמַר לִי: הָיָה לְךָ לְהִתְפַּלֵּל תְּפִלָּה קְצָרָה. וְאָמַר לִי: בְּנִי, מָה קוֹל שָׁמַעְתָּ בְּחוּרְבָּה זוֹ? וְאָמַרְתִּי לוֹ: שָׁמַעְתִּי בַּת קוֹל שֶׁמְּנַהֶמֶת כְּיוֹנָה וְאוֹמֶרֶת: אוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי וְשָׂרַפְתִּי אֶת הֵיכָלִי וְהִגְלֵיתִי אֶת בָּנַי לְבֵין אוּמּוֹת הָעוֹלָם. וְאָמַר לִי: חַיֶּיךָ וְחַיֵּי רֹאשְׁךָ, לֹא שָׁעָה זוֹ בִּלְבַד אוֹמֶרֶת כָּךְ, אֶלָּא בְּכָל יוֹם וָיוֹם, שָׁלֹשׁ פְּעָמִים אוֹמֶרֶת כָּךְ.
+    </div>
+    <h3>English</h3>
+    <div class="english-text">
+      It was taught in a baraita that Rabbi Yosi said: Once I was walking along the road when I entered one of the ruins among the ruins of Jerusalem to pray. Elijah, of blessed memory, came and guarded the entrance for me until I finished my prayer. After I finished my prayer he said to me: &ldquo;Greetings to you, my rabbi.&rdquo; I answered him: &ldquo;Greetings to you, my rabbi, my teacher.&rdquo; And he said to me: My son, why did you enter this ruin? I said to him: To pray. And he said to me: You should have prayed on the road. And I said to him: I was afraid that travelers might interrupt me. And he said to me: You should have recited an abbreviated prayer. And he said to me: My son, what voice did you hear in this ruin? I responded: I heard a Heavenly voice, cooing like a dove and saying: &ldquo;Woe to the children, due to whose sins I destroyed My house, burned My Temple, and exiled them among the nations of the world.&rdquo; And he said to me: By your life and by your head, not only at this moment does it say thus, but rather every single day, three times does it say thus.
+    </div>
+    <p class="citation">&mdash; Babylonian Talmud, Berakhot 3a</p>
+    <div class="page-num">5</div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     SHEET 3 BACK — p.6 (L) | p.11 (R)
+══════════════════════════════════════════ -->
+<div class="sheet-label">Sheet 3 — Back &nbsp;|&nbsp; Left: p.6 (notes on source) &nbsp;&bull;&nbsp; Right: p.11 (script part 3 + closing ritual)</div>
+<div class="sheet">
+
+  <!-- p.6 — NOTES ON SOURCE -->
+  <div class="panel">
+    <h2>Notes on the Source</h2>
+    <div class="source-note">
+      <span class="note-heading">&ldquo;One of the ruins of Jerusalem&rdquo;</span>
+      Rabbi Yosi doesn&rsquo;t enter <em>the</em> great ruin&mdash;the Temple Mount. He enters an ordinary ḥurvah, one nameless wreck among many. This is not a grand confrontation with destruction; it is an ordinary person stepping into an ordinary ruin, looking for a quiet place to pray. That ordinariness is the point. Our play honors this: Mara does not stand before the Temple. She stands before <em>her</em> ruin&mdash;the one that was specifically hers to lose.
+    </div>
+    <div class="source-note">
+      <span class="note-heading">Elijah guards the door but does not enter</span>
+      This detail is easy to miss. Elijah waits at the threshold. He does not join Rabbi Yosi inside. The holy stranger stands at the margin of the destruction, not within it. In our play, the Stranger appears in the dim light outside the ruin&mdash;not inside. The Talmud places holiness at the edge, not at the center of the collapse.
+    </div>
+    <div class="source-note">
+      <span class="note-heading">&ldquo;You should have prayed on the road&rdquo;</span>
+      Elijah&rsquo;s first correction is not theological&mdash;it is practical and urgent. <em>Do not stay in the ruin.</em> Pray where your feet can move. This single phrase is the seed from which the entire play grows. The Stranger&rsquo;s line &mdash; <em>&ldquo;On the road. Where your feet can move. Where breath can return&rdquo;</em> &mdash; is a direct expansion of these six Talmudic words.
+    </div>
+    <div class="source-note">
+      <span class="note-heading">&ldquo;You should have recited an abbreviated prayer&rdquo;</span>
+      The Talmud&rsquo;s concession to human limitation&mdash;that a shortened, honest prayer is not a lesser prayer&mdash;becomes in our play a full theology: <em>&ldquo;A single honest word is holier than a thousand perfect ones.&rdquo;</em> This is not a modern invention. It is already in the Talmud, waiting to be unpacked.
+    </div>
+    <div class="source-note">
+      <span class="note-heading">The bat kol &mdash; the Heavenly voice cooing like a dove</span>
+      The divine voice is not majestic here. It moans. It coos like a dove. It grieves. The Talmud insists that Hashem does not observe destruction from a distance&mdash;Hashem laments it, three times a day, every day. Our play gives voice to this grief: <em>&ldquo;Even the Holy One cries&mdash;for every soul wounded in a place meant to be safe.&rdquo;</em> The dove is not decoration. It is the bat kol of the Talmud, brought forward into this room, on this night.
+    </div>
+    <div class="source-note">
+      <span class="note-heading">Three times a day</span>
+      Elijah&rsquo;s final statement is quietly staggering: this lament is not a one-time cry at the moment of destruction. It echoes three times daily, across all of history, and is still echoing now. Tisha b&rsquo;Av is not a commemoration of something that ended. It is one night when we tune our ears to a grief that has never stopped.
+    </div>
+    <div class="page-num">6</div>
+  </div>
+
+  <!-- p.11 — SCRIPT PART THREE + CLOSING RITUAL -->
+  <div class="panel">
+    <div class="script-block">
+      <span class="speaker">Narrator</span>
+      Mara takes one small step away from the ruin. The dove flutters its wings above. The melody shifts&mdash;still mournful, but with a thread of dawn.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Mara</span>
+      I&rsquo;m not ready. But I&rsquo;m willing.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Stranger</span>
+      That is enough. For now, that is the whole prayer.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Narrator</span>
+      <span class="cue">Cue D</span> And so they walk&mdash;not far, not fast&mdash;but forward. A voice rises in the darkness, chanting the ancient plea:
+    </div>
+    <div class="script-block">
+      <span class="cue">Cue E</span> <span class="stage-dir">(Hashiveinu melody begins &mdash; congregation joins in song)</span>
+    </div>
+    <span class="script-hebrew">הֲשִׁיבֵנוּ יְהוָה אֵלֶיךָ וְנָשׁוּבָה<br>חַדֵּשׁ יָמֵינוּ כְּקֶדֶם</span>
+    <p class="script-translation"><em>Turn us toward You, O Lord, and we shall return;<br>renew our days as of old.</em></p>
+    <hr>
+    <h3 style="margin-top:0.1in;">Closing Ritual</h3>
+    <p>After the Hashiveinu, allow the music to fade and hold silence. The leader may say quietly:</p>
+    <div class="ritual-text">
+      <p>&ldquo;Even in the ruins, we take one step forward. Even in the darkness, we seek the road. Even now&mdash;we turn.&rdquo;</p>
+    </div>
+    <p>Softly turn up lights and move to discussion prompts on page 14.</p>
+    <div class="page-num">11</div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     SHEET 4 FRONT — p.10 (L) | p.7 (R)
+══════════════════════════════════════════ -->
+<div class="sheet-label">Sheet 4 — Front &nbsp;|&nbsp; Left: p.10 (script part 2) &nbsp;&bull;&nbsp; Right: p.7 (note on Mara)</div>
+<div class="sheet">
+
+  <!-- p.10 — SCRIPT PART TWO -->
+  <div class="panel">
+    <div class="script-block">
+      <span class="speaker">Mara</span>
+      I know. But it&rsquo;s where I lost everything I trusted. And I thought maybe holiness still lived in the cracks.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Stranger</span>
+      Holiness does not live in ruins. Only memory does. And memory can collapse on you like a roof that was never repaired.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Narrator</span>
+      <span class="cue">Cue B</span> The dove coos&mdash;a low, mournful sound.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Mara</span>
+      Do you hear that? It sounds like crying.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Stranger</span>
+      It is crying. The world cries with you. Even the Holy One cries&mdash;for every soul wounded in a place meant to be safe, for every institution that forgot its purpose, for every word sharpened into a blade, for every act of violence that tears the fabric of creation.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Mara</span>
+      I thought Hashem abandoned us.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Stranger</span>
+      Hashem stood outside the door you could not escape. And Hashem stands with you now. But Hashem will not let you stay in the ruin.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Mara</span>
+      Then where am I supposed to pray?
+    </div>
+    <div class="script-block">
+      <span class="speaker">Stranger</span>
+      <span class="cue">Cue C</span> On the road. Where your feet can move. Where breath can return. Where healing can walk beside you. Where hope is fragile but real.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Mara</span>
+      And if I can&rsquo;t pray the whole prayer?
+    </div>
+    <div class="script-block">
+      <span class="speaker">Stranger</span>
+      Then shorten it. A single honest word is holier than a thousand perfect ones.
+    </div>
+    <div class="page-num">10</div>
+  </div>
+
+  <!-- p.7 — NOTE ON MARA -->
+  <div class="panel">
+    <h2>3. A Note on Mara</h2>
+    <p>She has been here before.</p>
+    <p>In this reading, Mara is Naomi&mdash;once a Nazirite, bound by vow to the shrine at Bethlehem. She came there as a young unmarried woman, drawn by devotion rather than obligation. It was at the shrine that she met Elimelech&mdash;a scion of a wealthy family who had turned his back on inheritance to sit with Torah. Their love grew quietly, in the margins of the sanctuary, between prayers.</p>
+    <p>The Kohen did not approve. Elimelech&rsquo;s family wealth was bound up with the shrine&rsquo;s economy, and a man who preferred study to commerce was a disruption the Kohen could not afford. So he manufactured a scandal&mdash;whispered accusations, a false account of dishonor&mdash;and brought it before the council. Naomi&rsquo;s Nazirite vows were annulled. The couple was pushed to the margins of Judean life. When armies pressed in from the east, they fled to Moab.</p>
+    <p>In Moab the family found footing. Her sons Mahlon and Chilion married well. Then the boys died. Elimelech died too.</p>
+    <p>She returned to Judah&mdash;not alone. Ruth, her Moabite daughter-in-law, refused to leave her side. Ruth is not in this scene. She waits at the inn at the edge of Bethlehem, patient and lovely, faithful as morning. Naomi came ahead alone, pulled by something she could not name&mdash;a need to return to the place where everything began and everything was taken.</p>
+    <p>She came back to the shrine at Bethlehem. She found it desecrated. Idols where the altar had been. Silence where there had been song. The institution that had betrayed her was a ruin. And so, she thought, was she.</p>
+    <p>This is where Elijah finds her. At the one broken place that had once been completely hers&mdash;where she had first prayed, first loved, and first been broken by someone who wore the robes of holiness.</p>
+    <p>The stranger does not tell her to rebuild it. He tells her to turn. This is her <em>Teshuvah</em>&mdash;not a grand return, not a rebuilt altar, but a turning of the heart. Back toward Hashem. Back toward the road, and the lovely Moabite daughter waiting at the inn, who has shown her more faithful love than any shrine ever did.</p>
+    <span class="mara-hebrew">אַל תִּקְרְאנָה לִי נָעֳמִי קְרֶאןָ לִי מָרָא</span>
+    <p class="mara-citation">&ldquo;Do not call me Naomi; call me Mara.&rdquo; &mdash; Ruth 1:20</p>
+    <p>She comes to this story carrying all three: the devotion that brought her back, the faith she is not sure she still has, and the hope she has not yet found words for.</p>
+    <div class="page-num">7</div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     SHEET 4 BACK — p.8 (L) | p.9 (R)
+══════════════════════════════════════════ -->
+<div class="sheet-label">Sheet 4 — Back &nbsp;|&nbsp; Left: p.8 (ritual guide) &nbsp;&bull;&nbsp; Right: p.9 (script part 1)</div>
+<div class="sheet">
+
+  <!-- p.8 — RITUAL GUIDE -->
+  <div class="panel">
+    <h2>4. Tisha b&rsquo;Av Ritual Guide</h2>
+    <h3>Purpose</h3>
+    <p>This ritual frames <em>The Ruin and the Road</em> as a modern midrash for Tisha b&rsquo;Av: we acknowledge destruction, listen for Hashem&rsquo;s grief, and seek the faintest glimmer of a road forward. The play moves through D&rsquo;veikut, Emunah, and Tikvah&mdash;not as answers, but as the questions a broken heart still dares to ask.</p>
+    <h3>A Note to the Leader</h3>
+    <p>Present the three theme readings before the play begins. Allow the silence after each to settle fully&mdash;at least 30 seconds&mdash;before moving to the next. These are not preamble. They are preparation.</p>
+    <h3>Atmosphere</h3>
+    <ul class="atmosphere">
+      <li><strong>Lighting:</strong> Dim, with a single focal light for the readers.</li>
+      <li><strong>Seating:</strong> Congregation seated low (floor or low stools).</li>
+      <li><strong>Sound:</strong> Soft lyre/guitar/harp prelude in a minor mode.</li>
+      <li><strong>Conduct:</strong> No greetings; quiet entry and exit.</li>
+    </ul>
+    <h3>Opening Ritual</h3>
+    <p>Leader reads:</p>
+    <div class="ritual-text">
+      <p>&ldquo;On this night we remember every place that was meant to be safe but was not. Every institution that failed. Every word sharpened into a weapon. Every act of violence that tore the fabric of creation. We sit in the ruins&mdash;not to stay there, but to listen.</p>
+      <p>We carry three things into this darkness: the devotion that brings us back even when we are broken, the faith we are not sure we still have, and the hope we have not yet found words for.</p>
+      <p>We begin.&rdquo;</p>
+    </div>
+    <p>Hold silence for 30&ndash;60 seconds, then begin the readers theater.</p>
+    <hr>
+    <div class="script-intro">
+      Four voices: NARRATOR &bull; MARA &bull; STRANGER &bull; LYRE PLAYER<br>
+      The Lyre Player may also be performed on cello, violin, or guitar. They play all musical themes live on stage throughout the piece.<br>
+      Readers sit or stand in a line facing the congregation. No movement is required.<br>
+      Music cues are marked <span class="cue">Cue A</span> &bull; <span class="cue">Cue B</span> &bull; etc.<br>
+      At <span class="cue">Cue E</span> (Hashiveinu), the congregation is warmly invited to sing along with the readers and leader.
+    </div>
+    <div class="page-num">8</div>
+  </div>
+
+  <!-- p.9 — SCRIPT PART ONE -->
+  <div class="panel">
+    <h2>5. Readers Theater: &ldquo;The Ruin and the Road&rdquo;</h2>
+    <div class="script-block">
+      <span class="speaker">Narrator</span>
+      <span class="cue">Cue A</span> On Tisha b&rsquo;Av, we sit in the ruins&mdash;of the Temple, of our people&rsquo;s traumas, and of our own world&rsquo;s unraveling. Tonight we hear a midrash retold: a woman, a holy stranger, a dove, and a melody older than sorrow.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Lyre Player</span>
+      <span class="stage-dir">(softly, as if plucking)</span> Some ruins echo louder than they speak.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Narrator</span>
+      Mara stands before a boarded-up shrine&mdash;a place that once promised safety and instead delivered harm. A dove watches from a tree above.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Mara</span>
+      I thought if I came back here&hellip; maybe I&rsquo;d understand why it happened. But it&rsquo;s just a ruin now. And I feel like one too.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Narrator</span>
+      A quiet presence steps into the dim light.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Stranger</span>
+      My daughter&hellip; why did you come to this place?
+    </div>
+    <div class="script-block">
+      <span class="speaker">Mara</span>
+      To pray. Or to scream. Or to ask why the world keeps breaking. Why people keep breaking each other. Why the places meant to protect us are the ones that crumble first.
+    </div>
+    <div class="script-block">
+      <span class="speaker">Stranger</span>
+      This place is dangerous for you.
+    </div>
+    <div class="page-num">9</div>
+  </div>
+
+</div>
+
+</body>
+</html>
