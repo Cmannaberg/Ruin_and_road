@@ -4,6 +4,8 @@ A Tisha b'Av readers theater and study booklet inspired by Talmud Berakhot 3a an
 
 **Written by Cary Mannaberg**
 
+🔗 **[View and print the booklet](https://cmannaberg.github.io/Ruin_and_road/)**
+
 ---
 
 ## About
