@@ -33,6 +33,8 @@ The booklet includes the Talmudic source text in Hebrew and English, notes on th
 | `ruin_and_road_booklet.md` | Source text (Markdown) |
 | `ruin_and_road.PNG` | Original cover illustration |
 | `ruin_and_road_cover.jpg` | Optimized cover illustration used in the HTML/PDF |
+| `qr_mobile_pdf.png` | QR code linking to the mobile PDF (printed on the inside cover) |
+| `LICENSE.md` | Usage rights (CC BY-NC-SA 4.0) |
 
 ---
 
@@ -62,6 +64,12 @@ For digital reading (not printing), use `ruin_and_road_mobile.pdf` — a single-
 - **Mara** — a woman returning to a shrine that once betrayed her
 - **The Stranger** — an Elijah-like presence at the threshold
 - **Lyre Player** — plays live throughout; lyre, cello, violin, or guitar
+
+---
+
+## License
+
+Licensed under [CC BY-NC-SA 4.0](LICENSE.md) — free to use and adapt for synagogue, classroom, or other educational settings, with attribution, non-commercially, and shared under the same license.
 
 ---
 
