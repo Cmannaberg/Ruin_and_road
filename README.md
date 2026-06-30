@@ -4,7 +4,9 @@ A Tisha b'Av readers theater and study booklet inspired by Talmud Berakhot 3a an
 
 **Written by Cary Mannaberg**
 
-🔗 **[View and print the booklet](https://cmannaberg.github.io/Ruin_and_road/)**
+🔗 **Choose your version:**
+- **[View and print the booklet](https://cmannaberg.github.io/Ruin_and_road/)** — saddle-stitch booklet layout, for printing
+- **[Read on phone or tablet](https://raw.githubusercontent.com/Cmannaberg/Ruin_and_road/main/ruin_and_road_mobile.pdf)** — single-column PDF, for screens
 
 ---
 
