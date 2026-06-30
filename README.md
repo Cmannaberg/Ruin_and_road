@@ -26,8 +26,11 @@ The booklet includes the Talmudic source text in Hebrew and English, notes on th
 | File | Description |
 |------|-------------|
 | `index.html` | Print-ready booklet — pre-imposed for saddle-stitch printing |
-| `ruin_and_road_booklet.pdf` | Print-ready PDF (pre-imposed, B&W) |
+| `ruin_and_road_booklet.pdf` | Print-ready PDF (pre-imposed, saddle-stitch) |
+| `ruin_and_road_mobile.pdf` | Single-column PDF formatted for reading on a phone or tablet |
 | `ruin_and_road_booklet.md` | Source text (Markdown) |
+| `ruin_and_road.PNG` | Original cover illustration |
+| `ruin_and_road_cover.jpg` | Optimized cover illustration used in the HTML/PDF |
 
 ---
 
@@ -42,6 +45,12 @@ The HTML and PDF are formatted for **saddle-stitch booklet printing** on standar
 5. Stack the 4 printed sheets, fold in half, staple along the center fold
 
 If the back side prints rotated 180°, switch to **Long-Edge** binding.
+
+---
+
+## Reading on a Phone or Tablet
+
+For digital reading (not printing), use `ruin_and_road_mobile.pdf` — a single-column, large-type PDF that flows naturally on small screens instead of the 2-up booklet layout.
 
 ---
 
