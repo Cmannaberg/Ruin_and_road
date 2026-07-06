@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Ruin and the Road — Read the Script</title>
+  <meta name="description" content="Read The Ruin and the Road, a Tisha b'Av readers theater and study booklet by Cary Mannaberg, directly in your browser.">
+  <meta property="og:title" content="The Ruin and the Road — Read the Script">
+  <meta property="og:description" content="A Tisha b'Av readers theater and study booklet inspired by Talmud Berakhot 3a and Eikhah (Lamentations).">
+  <meta property="og:image" content="https://cmannaberg.github.io/Ruin_and_road/ruin_and_road_cover.jpg">
+  <meta property="og:url" content="https://cmannaberg.github.io/Ruin_and_road/read.html">
+  <meta property="og:type" content="website">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+    :root {
+      --paper: #f6f2e8;
+      --ink: #1c1a16;
+      --faded: #6f6758;
+      --rule: #c9c0ac;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+      background: var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      padding: 34px 20px 22px;
+    }
+
+    header h1 {
+      font-size: clamp(1.7rem, 5vw, 2.4rem);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    header .subtitle {
+      font-style: italic;
+      color: var(--faded);
+      font-size: clamp(0.95rem, 3vw, 1.1rem);
+      margin-top: 6px;
+    }
+
+    header .byline {
+      font-size: 0.9rem;
+      color: var(--faded);
+      margin-top: 10px;
+      letter-spacing: 0.06em;
+    }
+
+    header::after {
+      content: "";
+      display: block;
+      width: 72px;
+      border-bottom: 1px solid var(--ink);
+      margin: 20px auto 0;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 16px 30px;
+    }
+
+    /* Desktop / larger screens: embedded scrollable PDF */
+    .viewer {
+      width: min(760px, 100%);
+      height: min(78vh, 1000px);
+      border: 1px solid var(--rule);
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(28, 26, 22, 0.12);
+    }
+
+    .viewer iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Phone: cover-as-button */
+    .mobile-cover {
+      display: none;
+      text-decoration: none;
+      color: inherit;
+      text-align: center;
+      max-width: 320px;
+    }
+
+    .mobile-cover img {
+      width: 100%;
+      border: 1px solid var(--rule);
+      box-shadow: 0 4px 18px rgba(28, 26, 22, 0.18);
+      display: block;
+    }
+
+    .mobile-cover .tap-hint {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 10px 26px;
+      border: 1px solid var(--ink);
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .fallback {
+      margin-top: 16px;
+      font-size: 0.92rem;
+      color: var(--faded);
+      text-align: center;
+    }
+
+    .fallback a {
+      color: var(--ink);
+    }
+
+    footer {
+      text-align: center;
+      padding: 14px 20px 26px;
+      font-size: 0.85rem;
+      color: var(--faded);
+      font-style: italic;
+    }
+
+    footer a { color: var(--faded); }
+
+    @media (max-width: 640px), (pointer: coarse) and (max-width: 900px) {
+      .viewer { display: none; }
+      .mobile-cover { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Ruin and the Road</h1>
+    <p class="subtitle">A Tisha b&rsquo;Av Readers Theater and Study Booklet</p>
+    <p class="byline">Written by Cary Mannaberg</p>
+  </header>
+
+  <main>
+    <!-- Desktop: scrollable embedded PDF -->
+    <div class="viewer">
+      <iframe src="ruin_and_road_mobile.pdf" title="The Ruin and the Road — full script"></iframe>
+    </div>
+
+    <!-- Phone: tap the cover to open the PDF full screen -->
+    <a class="mobile-cover" href="ruin_and_road_mobile.pdf">
+      <img src="ruin_and_road_cover.jpg" alt="Cover of The Ruin and the Road — ink illustration of a woman's face and a bird rising through storm clouds">
+      <span class="tap-hint">Open the script</span>
+    </a>
+
+    <p class="fallback">
+      Trouble viewing? <a href="ruin_and_road_mobile.pdf">Open the PDF directly</a>
+      or see the <a href="index.html">print-ready booklet</a>.
+    </p>
+  </main>
+
+  <footer>
+    For Tisha b&rsquo;Av study and worship &middot; <a href="https://github.com/Cmannaberg/Ruin_and_road">Source</a>
+  </footer>
+</body>
+</html>
