@@ -209,13 +209,18 @@ I'm not ready. But I'm willing.
 That is enough. For now, that is the whole prayer.
 
 **Narrator**
-CUE D And so they walk — not far, not fast — but forward. A voice rises in the darkness, chanting the ancient plea:
+CUE D And so they walk — not far, not fast — but forward. A voice rises from the gathering, singing:
 
-הֲשִׁיבֵנוּ יְהוָה אֵלֶיךָ וְנָשׁוּבָה
-חַדֵּשׁ יָמֵינוּ כְּקֶדֶם
+CUE E *("Lament" by Rabbi Shefa Gold begins — the group joins in the round)*
 
-*Turn us toward You, O Lord, and we shall return;*
-*renew our days as of old.*
+*How my heart has been broken by the cruelty of this world*
+*How my heart has been broken by the beauty of this world*
+
+אֵיכָה יָשְׁבָה בָדָד
+
+*Eicha yashva vadad* — How she sits alone! (Lamentations 1:1)
+
+*(Between repetitions, each person calls out a lament — a heartbreak, personal or communal. The round continues beneath each voice.)*
 
 ---
 
@@ -258,9 +263,9 @@ Mode: Dorian or harmonic minor | Tempo: Slow, steady
 Mode: Minor with a gentle lift (raised 6th or 7th) | Tempo: Slightly more flowing
 *Use: Mara's step away from the ruin*
 
-**Theme D – "Hashiveinu"**
-Mode: Match the mode of your chosen Hashiveinu melody
-*Use: Lamentations 5:21 chant and its instrumental echo*
+**Theme D – "Lament" (Rabbi Shefa Gold)**
+Mode: Minor; follow the published notation
+*Use: The closing round; continue softly beneath the spoken laments*
 
 ### Cue Plan
 
@@ -270,7 +275,7 @@ Mode: Match the mode of your chosen Hashiveinu melody
 | B | Dove's cry | High harmonic or gentle glissando over Theme A |
 | C | Theme B | Stranger's lines |
 | D | Theme C | "A single honest word…" and Mara's step |
-| E | Theme D | Lamentations 5:21 chant and instrumental continuation |
+| E | Theme D | "Lament" round begins; continue softly beneath spoken laments |
 | F | Silence | Music fades, room holds quiet |
 
 ---
@@ -281,4 +286,4 @@ Mode: Match the mode of your chosen Hashiveinu melody
 2. **The Stranger:** Who has met you at the threshold of pain?
 3. **The Dove:** What does it mean that Hashem cries with us?
 4. **The Road:** What is one small step forward you feel willing to take?
-5. **Hashiveinu:** How might "renew our days as of old" mean courage, not nostalgia?
+5. **Lament:** What did you name, or want to name, in the circle of laments? How does naming grief alongside others change it?
