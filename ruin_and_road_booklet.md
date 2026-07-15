@@ -245,38 +245,31 @@ The road is movement, agency, and the possibility of healing. Elijah's teaching 
 
 ## 7. Musical Arrangement Guide
 
-### Instrumentation
+### What the Shruti Box Does
 
-Use shruti box or harmonium as the primary drone; accordion may also substitute. The sound should be ancient, sparse, and fragile. Silence is part of the music.
+A shruti box produces a sustained drone — one note held continuously, with the option to add its fifth (the "Pa" reed). It does not play melodies or change pitch. Its job is to be the ground beneath the voices: steady, present, and breathing.
 
-### Four Themes
+### Before You Begin
 
-**Theme A – "The Ruin"**
-Mode: Natural minor or Phrygian | Tempo: Very slow
-*Use: Prelude, Mara's opening lines, moments of lament*
+**Choose your key**
+Have the readers hum a comfortable pitch for the Lament. D minor or E minor are good starting points. Set the shruti box to that root note.
 
-**Theme B – "The Stranger"**
-Mode: Dorian or harmonic minor | Tempo: Slow, steady
-*Use: When the Stranger speaks*
+**Open one or two reeds only**
+Root note alone for a spare sound. Root + fifth ("Pa") for a fuller sound. Avoid opening more — less is more.
 
-**Theme C – "The Road"**
-Mode: Minor with a gentle lift (raised 6th or 7th) | Tempo: Slightly more flowing
-*Use: Mara's step away from the ruin*
-
-**Theme D – "Lament" (Rabbi Shefa Gold)**
-Mode: Minor; follow the published notation
-*Use: The closing round; continue softly beneath the spoken laments*
+**Controlling volume**
+Pump the bellows steadily for a full tone. Ease pressure for a softer sound. The drone should feel like breath — never louder than the voices.
 
 ### Cue Plan
 
-| Cue | Theme | When |
-|-----|-------|------|
-| A | Theme A | Prelude and early narration |
-| B | Dove's cry | High harmonic or gentle glissando over Theme A |
-| C | Theme B | Stranger's lines |
-| D | Theme C | "A single honest word…" and Mara's step |
-| E | Theme D | "Lament" round begins; continue softly beneath spoken laments |
-| F | Silence | Music fades, room holds quiet |
+| Cue | Dynamic | When |
+|-----|---------|------|
+| A | Soft | Begin drone before first word; hold beneath early narration |
+| B | Swell gently | The dove's cry — let drone rise slightly, then settle |
+| C | Soft, steady | Beneath the Stranger's lines |
+| D | Swell | "A single honest word…" and Mara's step forward |
+| E | Full | "Lament" round — drone anchors the singers; continue beneath spoken laments |
+| F | Fade to silence | Ease off bellows slowly; room holds quiet |
 
 ---
 
