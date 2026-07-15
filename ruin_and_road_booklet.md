@@ -108,7 +108,7 @@ If using the three theme readings from the Introduction, present them before the
 
 - **Lighting:** Dim, with a single focal light for the readers.
 - **Seating:** Congregation seated low (floor or low stools).
-- **Sound:** Soft lyre/guitar/harp prelude in a minor mode.
+- **Sound:** Soft shruti box drone prelude in a minor mode.
 - **Conduct:** No greetings; quiet entry and exit.
 
 ### Opening Ritual
@@ -137,7 +137,7 @@ No formal dismissal. People leave quietly.
 
 *Four voices: NARRATOR • MARA • STRANGER • LYRE PLAYER*
 *Readers sit or stand in a line facing the congregation. No movement is required.*
-*The lyre/guitar/harp plays softly throughout, following the musical guide.*
+*The shruti box plays a sustained drone throughout, following the musical guide.*
 *Music cues are marked:* CUE A *•* CUE B *• etc.*
 
 ---
@@ -145,7 +145,7 @@ No formal dismissal. People leave quietly.
 **Narrator**
 CUE A On Tisha b'Av, we sit in the ruins — of the Temple, of our people's traumas, and of our own world's unraveling. Tonight we hear a midrash retold: a woman, a holy stranger, a dove, and a melody older than sorrow.
 
-**Lyre Player**
+**Shruti Box Player**
 *(softly, as if plucking)* Some ruins echo louder than they speak.
 
 **Narrator**
@@ -247,7 +247,7 @@ The road is movement, agency, and the possibility of healing. Elijah's teaching 
 
 ### Instrumentation
 
-Use any of: lyre, classical guitar, harp, violin, cello, or a small combination. The sound should be ancient, sparse, and fragile. Silence is part of the music.
+Use shruti box or harmonium as the primary drone; accordion may also substitute. The sound should be ancient, sparse, and fragile. Silence is part of the music.
 
 ### Four Themes
 
