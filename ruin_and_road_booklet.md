@@ -70,15 +70,15 @@ Elijah's final statement is quietly staggering: this lament is not a one-time cr
 
 She has been here before.
 
-In this reading, Mara is Naomi — once a Nazirite, bound by vow to the shrine at Bethlehem. She came there as a young unmarried woman, drawn by devotion rather than obligation. It was at the shrine that she met Elimelech — a scion of a wealthy family who had turned his back on inheritance to sit with Torah. Their love grew quietly, in the margins of the sanctuary, between prayers.
+In this reading, Mara is Naomi from the Book of Ruth — Naomi was once a Nazirite, bound by vow to the shrine at Bethlehem. She came there as a young unmarried woman, drawn by devotion rather than obligation. It was at the shrine that she met Elimelech — a scion of a wealthy family who had turned his back on inheritance to sit with Torah. Their love grew quietly, in the margins of the sanctuary, between prayers.
 
 The Kohen did not approve. Elimelech's family wealth was bound up with the shrine's economy, and a man who preferred study to commerce was a disruption the Kohen could not afford. So he manufactured a scandal — whispered accusations, a false account of dishonor — and brought it before the council. Naomi's Nazirite vows were annulled. The couple was pushed to the margins of Judean life, farming poor rocky land at the edge of what was barely a community. When armies pressed in from the east, they fled to Moab.
 
-In Moab the family found footing. Her sons Mahlon and Chilion moved in royal circles, married well. Then the boys died — the tradition says this was reckoning for idol worship, though Naomi never stopped teaching Torah under whatever roof she had. Elimelech died too.
+In Moab the family found footing. Her sons Mahlon and Chilion married well. Then suddenly Naomi's son Chilion died. Then Naomi's son Mahlon died. Naomi grieved with her two daughters-in-law, Ruth and Orpah. Then Naomi's husband Elimelech died too.
 
-She returned to Judah — not alone. Ruth, her Moabite daughter-in-law, refused to leave her side. Ruth is not in this scene. She waits at the inn at the edge of Bethlehem, patient and lovely, faithful as morning. Naomi came ahead alone, pulled by something she could not name — a need to return to the place where everything began and everything was taken.
+Naomi returned to Judah — not alone. Ruth, her Moabite daughter-in-law, refused to leave her side. Ruth is not in this scene. She waits at the inn at the edge of Bethlehem, patient and lovely, faithful as morning. Naomi came ahead alone, pulled by something she could not name — a need to return to the place where everything began and everything was taken.
 
-She came back to the shrine at Bethlehem. She found it desecrated. Idols where the altar had been. Silence where there had been song. The Kohen was gone. The institution that had betrayed her was a ruin. And so, she thought, was she.
+Naomi came back to the shrine at Bethlehem where as a young woman she had once prayed. She found it desecrated. Idols where the altar had been. Silence where there had been song. The Kohen was gone. The institution that had betrayed her was a ruin. And so, she thought, was she.
 
 This is where Elijah finds her. Not in Jerusalem. Not at a great temple. At the one broken place in the world that had once been completely hers — where she had first prayed, first loved, and first been broken by someone who wore the robes of holiness.
 
