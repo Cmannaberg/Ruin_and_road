@@ -2,6 +2,11 @@
 
 A Tisha b'Av readers theater and study booklet inspired by Talmud Berakhot 3a and Eikhah (Lamentations).
 
+
+** changes 
+- **change Mara's backgroud story where sons died
+- ** add musical notation to back cover
+
 **Written by Cary Mannaberg**
 
 🔗 **Choose your version:**
