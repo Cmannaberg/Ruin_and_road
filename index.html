@@ -171,10 +171,10 @@
     @media print {
       body { background: white; padding: 0; }
       .print-note, .sheet-label { display: none; }
-      .sheet { margin: 0; page-break-after: always; overflow: hidden; }
+      .sheet { width: 10.5in; height: 8.0in; margin: 0 auto; page-break-after: always; overflow: hidden; }
       .sheet:last-child { page-break-after: auto; }
-      .panel { overflow: visible; }
-      @page { size: 11in 8.5in; margin: 0; }
+      .panel { width: 5.25in; height: 8.0in; overflow: hidden; }
+      @page { size: 11in 8.5in; margin: 0.25in; }
     }
   </style>
 </head>
@@ -620,7 +620,7 @@
     </div>
     <div class="script-block">
       <span class="speaker">Shruti Box Player</span>
-      <span class="stage-dir">(softly, as if plucking)</span> Some ruins echo louder than they speak.
+      <span class="stage-dir">(softly, the drone begins)</span> Some ruins echo louder than they speak.
     </div>
     <div class="script-block">
       <span class="speaker">Narrator</span>

@@ -146,7 +146,7 @@ No formal dismissal. People leave quietly.
 CUE A On Tisha b'Av, we sit in the ruins — of the Temple, of our people's traumas, and of our own world's unraveling. Tonight we hear a midrash retold: a woman, a holy stranger, a dove, and a melody older than sorrow.
 
 **Shruti Box Player**
-*(softly, as if plucking)* Some ruins echo louder than they speak.
+*(softly, the drone begins)* Some ruins echo louder than they speak.
 
 **Narrator**
 Mara stands before a boarded-up shrine — a place that once promised safety and instead delivered harm. A dove watches from a tree above.
